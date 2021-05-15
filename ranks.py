@@ -20,11 +20,25 @@ params = (
     ('season', '17'),
 )
 
-response = requests.get('https://api.tracker.gg/api/v2/rocket-league/standard/profile/steam/76561198291004384/segments/playlist', headers=headers, params=params)
+MainAccount= "76561198291004384"
+AltAccount = "76561198864268960"
 
-r = response.json()
+Main = requests.get('https://api.tracker.gg/api/v2/rocket-league/standard/profile/steam/76561198291004384/segments/playlist', headers=headers, params=params)
 
-#print(r["data"][0])
+r1 = Main.json()
 
-for i in r["data"]:
+Alt = requests.get('https://api.tracker.gg/api/v2/rocket-league/standard/profile/steam/'+ AltAccount +'/segments/playlist', headers=headers, params=params)
+
+r2 = Alt.json()
+
+#print out the name of the 
+
+print("Main Account Ranks:")
+for i in r1["data"]:
   print(i["metadata"]["name"])
+  print(i["stats"]["tier"]["metadata"]["name"])
+  
+print("\nAlt Account Ranks:")
+for i in r2["data"]:
+  print(i["metadata"]["name"])
+  print(i["stats"]["tier"]["metadata"]["name"])
