@@ -25,6 +25,8 @@ params = (
 MainAccount= "76561198291004384"
 AltAccount = "76561198864268960"
 
+#the two requests are seperated 
+
 Main = requests.get('https://api.tracker.gg/api/v2/rocket-league/standard/profile/steam/76561198291004384/segments/playlist', headers=headers, params=params)
 
 r1 = Main.json()
