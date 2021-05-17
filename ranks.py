@@ -35,7 +35,7 @@ Alt = requests.get('https://api.tracker.gg/api/v2/rocket-league/standard/profile
 
 r2 = Alt.json()
 
-#print out the name of the 
+#print out the name of the name, rank, and division of each playlist on both accounts
 
 print("Main Account Ranks:")
 for i in r1["data"]:
