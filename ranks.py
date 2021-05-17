@@ -21,6 +21,7 @@ params = (
     ('season', '17'),
 )
 
+#my two steam ID's for my main and alt rocket league account
 MainAccount= "76561198291004384"
 AltAccount = "76561198864268960"
 
