@@ -1,6 +1,7 @@
 import requests
 import json
 
+#headers and parameters for requests
 headers = {
     'authority': 'api.tracker.gg',
     'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"',
