@@ -36,9 +36,16 @@ r2 = Alt.json()
 print("Main Account Ranks:")
 for i in r1["data"]:
   print(i["metadata"]["name"])
-  print(i["stats"]["tier"]["metadata"]["name"])
+  print(
+    i["stats"]["tier"]["metadata"]["name"] + 
+    ": " +
+    i["stats"]["division"]["metadata"]["name"])
   
 print("\nAlt Account Ranks:")
 for i in r2["data"]:
   print(i["metadata"]["name"])
-  print(i["stats"]["tier"]["metadata"]["name"])
+  print(i["stats"]["tier"]["metadata"]["name"] + 
+    ": " +
+    i["stats"]["division"]["metadata"]["name"])
+
+
